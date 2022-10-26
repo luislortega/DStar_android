@@ -5,7 +5,7 @@ unix:QT += serialport
 CONFIG += c++11
 LFLAGS +=
 android:INCLUDEPATH += $$(HOME)/Android/android-build/include
-LIBS += -limbe_vocoder
+LIBS += -Limbe_vocoder
 !win32:LIBS += -ldl
 win32:QT += serialport
 win32:INCLUDEPATH += /mnt/data/src/mxe/usr/include
@@ -62,7 +62,7 @@ HEADERS += \
 	ref.h \
 	vocoder_plugin.h \
 	xrf.h \
-	ysf.h
+        ysf.h
 android:HEADERS += androidserialport.h
 macx:HEADERS += micpermission.h
 !ios:HEADERS += serialambe.h serialmodem.h
@@ -91,7 +91,7 @@ SOURCES += \
 	p25.cpp \
 	ref.cpp \
 	xrf.cpp \
-	ysf.cpp
+        ysf.cpp
 android:SOURCES += androidserialport.cpp
 !ios:SOURCES += serialambe.cpp serialmodem.cpp
 !contains(DEFINES, USE_EXTERNAL_CODEC2){
