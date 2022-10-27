@@ -23,7 +23,7 @@
 #ifdef USE_FLITE
 #include <flite/flite.h>
 #endif
-#include <imbe_vocoder_api.h>
+//#include <imbe_vocoder_api.h>
 #ifdef VOCODER_PLUGIN
 #include "vocoder_plugin.h"
 #else
@@ -191,7 +191,7 @@ protected:
 	QQueue<uint8_t> m_rxcodecq;
 	QQueue<uint8_t> m_txcodecq;
 	QQueue<uint8_t> m_rxmodemq;
-	imbe_vocoder vocoder;
+    //imbe_vocoder vocoder;
 #ifdef VOCODER_PLUGIN
 	Vocoder *m_mbevocoder;
 #else

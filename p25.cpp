@@ -237,7 +237,8 @@ void P25::transmit()
 	int16_t pcm[160];
 	uint8_t buffer[22];
 	static uint8_t p25step = 0;
-#ifdef USE_FLITE
+
+/*#ifdef USE_FLITE
 	if(m_ttsid > 0){
 		for(int i = 0; i < 160; ++i){
 			if(m_ttscnt >= tts_audio->num_samples/2){
@@ -260,7 +261,7 @@ void P25::transmit()
 			return;
 		}
 	}
-
+*/
 	if(m_tx){
 		switch (p25step) {
 		case 0x00U:
@@ -432,7 +433,7 @@ void P25::process_rx_data()
 			imbe[i] = m_rxcodecq.dequeue();
 		}
 
-		vocoder.decode_4400(pcm, imbe);
+        //vocoder.decode_4400(pcm, imbe);
 		m_audio->write(pcm, 160);
 		emit update_output_level(m_audio->level());
 	}
