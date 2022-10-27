@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<manifest package="org.dudetronics.droidstar" xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="-- %%INSERT_VERSION_NAME%% --" android:versionCode="68" android:installLocation="auto">
+<manifest package="org.rfinder.m17" xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="v1" android:versionCode="68" android:installLocation="auto">
         <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="30"/>
 
         <!-- The following comment will be replaced upon deployment with default permissions based on the dependencies of the application.
@@ -12,8 +12,8 @@
 
         <supports-screens android:largeScreens="true" android:normalScreens="true" android:anyDensity="true" android:smallScreens="true"/>
 
-        <application android:hardwareAccelerated="true" android:name="org.qtproject.qt5.android.bindings.QtApplication" android:label="-- %%INSERT_APP_NAME%% --" android:extractNativeLibs="true" android:icon="@drawable/icon">
-        <activity android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|layoutDirection|locale|fontScale|keyboard|keyboardHidden|navigation|mcc|mnc|density" android:name="org.qtproject.qt5.android.bindings.QtActivity" android:label="-- %%INSERT_APP_NAME%% --" android:screenOrientation="unspecified" android:launchMode="singleTop">
+        <application android:hardwareAccelerated="true" android:name="org.qtproject.qt5.android.bindings.QtApplication" android:label="RFinder M17 Alpha" android:extractNativeLibs="true" android:icon="@drawable/icon">
+        <activity android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|layoutDirection|locale|fontScale|keyboard|keyboardHidden|navigation|mcc|mnc|density" android:name="org.qtproject.qt5.android.bindings.QtActivity" android:label="RFinder M17 Alpha" android:screenOrientation="unspecified" android:launchMode="singleTop">
             <intent-filter>
                                 <action android:name="android.intent.action.MAIN"/>
                                 <category android:name="android.intent.category.LAUNCHER"/>

@@ -38,7 +38,7 @@ ApplicationWindow {
 	palette.base: "black"
 	palette.text: "white"
 	palette.windowText: "white"
-	palette.highlight: "steelblue"
+    palette.highlight: "#f80b0b"
 
 	MessageDialog {
 		id: idcheckDialog
@@ -65,29 +65,30 @@ ApplicationWindow {
 		width: parent.width
 		currentIndex: swiper.currentIndex
 		background: Rectangle {
-			color: "steelblue"
+            color: "#f80b0b"
 		}
 		TabButton {
 			id: mainButton
 			padding: 10
 			background: Rectangle {
-				color: bar.currentIndex === 0 ? "steelblue" : "#353535"
+                color: bar.currentIndex === 0 ? "#f80b0b" : "#353535"
 			}
-			text: qsTr("Main")
+            text: qsTr("RFinder")
 		}
 		TabButton {
 			id: settingsButton
 			padding: 10
 			background: Rectangle {
-				color: bar.currentIndex === 1 ? "steelblue" : "#353535"
+                color: bar.currentIndex === 1 ? "#f80b0b" : "#353535"
 			}
 			text: qsTr("Settings")
 		}
-		TabButton {
+
+        TabButton {
 			id: logButton
 			padding: 10
 			background: Rectangle {
-				color: bar.currentIndex === 2 ? "steelblue" : "#353535"
+                color: bar.currentIndex === 2 ? "#f80b0b" : "#353535"
 			}
 			text: qsTr("Log")
 		}
@@ -95,18 +96,18 @@ ApplicationWindow {
 			id: hostsButton
 			padding: 10
 			background: Rectangle {
-				color: bar.currentIndex === 3 ? "steelblue" : "#353535"
+                color: bar.currentIndex === 3 ? "#f80b0b" : "#353535"
 			}
 			text: qsTr("Hosts")
-		}
+        }
 		TabButton {
 			id: aboutButton
 			padding: 10
 			background: Rectangle {
-				color: bar.currentIndex === 4 ? "steelblue" : "#353535"
+                color: bar.currentIndex === 4 ? "#f80b0b" : "#353535"
 			}
 			text: qsTr("About")
-		}
+        }
 	}
 	SwipeView {
 		id: swiper
@@ -460,14 +461,14 @@ ApplicationWindow {
 					droidstar.tx_clicked(false);
 					mainTab.txtimer.running = false;
 					mainTab.btntxt.color = "black";
-					mainTab.btntxt.text = "TX";
+                    mainTab.btntxt.text = "RECORD AUDIO";
 				}
 				mainTab.connectbutton.text = "Connect";
 				mainTab.comboMode.enabled = true;
 				mainTab.comboHost.enabled = true;
 				mainTab.comboModule.enabled = true;
 				mainTab.buttonTX.enabled = false;
-				mainTab.btntxt.color = "steelblue";
+                mainTab.btntxt.color = "#f80b0b";
 				mainTab.data1.text = "";
 				mainTab.data2.text = "";
 				mainTab.data3.text = "";
